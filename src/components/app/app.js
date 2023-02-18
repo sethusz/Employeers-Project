@@ -7,18 +7,21 @@ import './app.css';
 
 
 function App() {
+
+  const data = [
+    {name: 'John C.', salary: 800, increase: false, id: 1},
+    {name: 'Alex M.', salary: 1000 , increase: true, id: 2},
+    {name: 'Carl W.', salary: 3300, increase: false, id: 3},
+  ]
   return (
     <div className="app">
-      <AppInfo/>
-
+      <AppInfo />
       <div className="search-panel">
-        <SearchPanel/>
-        <AppFilter/>
+        <SearchPanel />
+        <AppFilter />
       </div>
-        <EmployeesList />
-        <EmployeesAddForm />
-      
-
+      <EmployeesList data= {data}/>
+      <EmployeesAddForm />
     </div>
   );
 }
