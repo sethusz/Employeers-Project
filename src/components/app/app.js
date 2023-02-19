@@ -19,7 +19,7 @@ class App extends Component {
         { name: 'Carl W.', salary: 5000, increase: false, rise: false, id: 3 }
       ],
       term: '', 
-      filter: 'all'
+      filter: 'all', 
     }
     this.maxId = 4;
   }
@@ -90,6 +90,7 @@ class App extends Component {
   }
 
 
+
   render() {
     const {data,term, filter} = this.state;
     const employees = this.state.data.length;
@@ -108,7 +109,8 @@ class App extends Component {
         <EmployeesList
           data={visibleData}
           onDelete={this.deleteItem}
-          onToggleProp={this.onToggleProp} />
+          onToggleProp={this.onToggleProp} 
+          handleInputChange = {this.handleInputChange}/>
         <EmployeesAddForm onAdd={this.addItem} />
       </div>
     );
